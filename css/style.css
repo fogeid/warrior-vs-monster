@@ -9,6 +9,9 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: var(--dark-medium);
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;    
 }
 
 /* HEADER */
@@ -29,6 +32,7 @@ body {
 .game {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .layout_panel {
@@ -130,6 +134,35 @@ body {
     color: #fff
 }
 
+/* LOGS */
+.logs .logs__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.logs .logs__list .logs__list__item {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0;
+    padding: 3px 0;
+    font-size: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.player {
+    background-color: #4253afaa;
+    color: #fff;
+}
+
+.monster {
+    background-color: #e51c23aa;
+    color: #fff;
+}
+
 /* FOOTER */
 .footer {
     margin-top: auto;
@@ -138,7 +171,7 @@ body {
 .footer .footer__title {
     text-align: center;
     padding: 15px;
-    background: #c3c3c3;
+    background-color: var(--dark);
 }
 
 .footer .footer__title__link {

@@ -54,7 +54,13 @@
                 <div v-else @click="startGame" class="buttons__btn buttons__btn--new-game">Iniciar Jogo</div>
             </div>
             <!-- LOGS -->
-            <div class="layout_panel logs"></div>
+            <div v-if="logs.length" class="layout_panel logs">
+                <ul class="logs__list">
+                    <li v-for="log in logs"
+                        :class="log.cls"
+                        class="logs__list__item">{{ log.text }}</li>
+                </ul>
+            </div>
         </main>
 
         <!-- FOOTER -->
