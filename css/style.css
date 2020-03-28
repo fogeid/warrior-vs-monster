@@ -97,12 +97,13 @@ body {
 /* BUTTONS */
 .buttons {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    flex-wrap: wrap;  
 }
 
 .buttons .buttons__btn {
     padding: 5px 10px;
-    margin: 0 10px;
+    margin: 10px;
     cursor: pointer;
     border-radius: 5px;
     text-transform: uppercase;
