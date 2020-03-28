@@ -37,14 +37,17 @@
                     <div class="score__percentage">{{ monsterLife }}%</div>
                 </div>
             </div>
-            <div class="layout_panel result"></div>
+            <div v-if="hasResult" class="layout_panel result">
+                <div v-if="monsterLife === 0" class="result__win">Você ganhou!!! :)</div>
+                <div v-else class="result__lose">Você perdeu! :(</div>
+            </div>
             <div class="layout_panel buttons"></div>
             <div class="layout_panel logs"></div>
         </main>
 
         <!-- FOOTER -->
         <footer class="footer">
-            <p class="footer__title">Created by <a class="footer__title__link" href="https://www.github.com/fogeid">Diego Batista</a></p>
+            <p class="footer__title">Created by <a class="footer__title__link" href="https://www.github.com/fogeid" target="_blank">Diego Batista</a></p>
         </footer>        
         <script src="js/app.js"></script>
     </body>

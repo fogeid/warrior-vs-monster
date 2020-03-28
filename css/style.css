@@ -1,5 +1,5 @@
 :root {
-    --dark: #181818;
+    --dark: #000;
     --dark-medium: #212121;
     --gray: #444444;
     --gray-light: #667580;    
@@ -7,11 +7,12 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    background: var(--dark-medium);
+    color: #fff;
 }
 
 /* HEADER */
 .header {
-
     background: var(--dark);
     height: 60px;
     display: flex;
@@ -33,6 +34,7 @@ body {
 .layout_panel {
     margin: 10px;
     padding: 20px;
+    background: var(--gray);
     box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
 }
 
@@ -66,13 +68,29 @@ body {
     display: flex;
     justify-content: center;
     height: 100%;
-    background-color: green;
+    background-color: rgb(0, 216, 0);
 }
 
 .score__lifeBar__lifeDanger {
     background-color: red;
 }
 
+/* RESULT */
+.result {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.result .result__win {
+    color: rgb(0, 216, 0);
+}
+
+.result .result__lose {
+    color: red;
+}
+
+/* FOOTER */
 .footer {
     margin-top: auto;
 }
