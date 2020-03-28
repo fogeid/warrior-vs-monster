@@ -46,12 +46,12 @@
             <!-- BUTTONS -->
             <div class="layout_panel buttons">
                 <template v-if="running">
-                    <div class="buttons__btn buttons__btn--atack">Ataque</div>
-                    <div class="buttons__btn buttons__btn--special-atack">Ataque Especial</div>
+                    <div @click="attack(false)" class="buttons__btn buttons__btn--attack">Ataque</div>
+                    <div @click="attack(true)" class="buttons__btn buttons__btn--special-attack">Ataque Especial</div>
                     <div class="buttons__btn buttons__btn--heal">Curar</div>
-                    <div class="buttons__btn buttons__btn--give-up">Desistir</div>
+                    <div @click="running = false" class="buttons__btn buttons__btn--give-up">Desistir</div>
                 </template>
-                <div v-else class="buttons__btn buttons__btn--new-game">Iniciar Jogo</div>
+                <div v-else @click="startGame" class="buttons__btn buttons__btn--new-game">Iniciar Jogo</div>
             </div>
             <!-- LOGS -->
             <div class="layout_panel logs"></div>
