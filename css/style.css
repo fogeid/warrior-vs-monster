@@ -1,0 +1,51 @@
+:root {
+    --dark: #181818;
+    --dark-medium: #212121;
+    --gray: #444444;
+    --gray-light: #667580;    
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* HEADER */
+.header {
+
+    background: var(--dark);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.header .header__logo {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+/* GAME */
+.game {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel {
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.footer .footer__title {
+    text-align: center;
+    padding: 15px;
+    background: #c3c3c3;
+}
+
+.footer .footer__title__link {
+    text-decoration: none;
+}

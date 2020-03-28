@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Warrior vs Monster</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <h1 class="header__logo">- WARRIOR vs MONSTER -</h1>
+        </header>
+
+        <!-- GAME -->
+        <main class="game" id="app">
+            <div class="panel score">
+                <h1>Jogador</h1>
+                <div class="life-bar">
+                    <div class="life"></div>
+                </div>
+                <div>{{ playerLife ]}%</div>
+            </div>
+            <div class="panel result"></div>
+            <div class="panel buttons"></div>
+            <div class="panel logs"></div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p class="footer__title">Created by <a class="footer__title__link" href="https://www.github.com/fogeid">Diego Batista</a></p>
+        </footer>
+        <script src="js/app.js"></script>
+    </body>
+</html>
