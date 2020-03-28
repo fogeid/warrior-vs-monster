@@ -14,3 +14,5 @@ let app = new Vue({
 
     },
 });
+
+console.log();

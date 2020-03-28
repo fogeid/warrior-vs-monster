@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <!-- HEADER -->
@@ -16,22 +17,35 @@
 
         <!-- GAME -->
         <main class="game" id="app">
-            <div class="panel score">
-                <h1>Jogador</h1>
-                <div class="life-bar">
-                    <div class="life"></div>
+            <div class="layout_panel scores">
+                <div class="score">
+                    <h1 class="score__player">Jogador</h1>
+                    <div class="score__life-bar">
+                        <div class="score__life-bar__life"
+                            :class="{score__lifeBar__lifeDanger: playerLife < 20}"
+                            :style="{width: playerLife + '%'}"></div>
+                    </div>
+                    <div class="score__percentage">{{ playerLife }}%</div>
                 </div>
-                <div>{{ playerLife ]}%</div>
+                <div class="score">
+                    <h1 class="score__player">Monstro</h1>
+                    <div class="score__life-bar">
+                        <div class="score__life-bar__life"
+                            :class="{score__lifeBar__lifeDanger: monsterLife < 20}"
+                            :style="{width: monsterLife + '%'}"></div>
+                    </div>
+                    <div class="score__percentage">{{ monsterLife }}%</div>
+                </div>
             </div>
-            <div class="panel result"></div>
-            <div class="panel buttons"></div>
-            <div class="panel logs"></div>
+            <div class="layout_panel result"></div>
+            <div class="layout_panel buttons"></div>
+            <div class="layout_panel logs"></div>
         </main>
 
         <!-- FOOTER -->
         <footer class="footer">
             <p class="footer__title">Created by <a class="footer__title__link" href="https://www.github.com/fogeid">Diego Batista</a></p>
-        </footer>
+        </footer>        
         <script src="js/app.js"></script>
     </body>
 </html>
