@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background: var(--dark-medium);
+    background-color: var(--dark-medium);
     color: #fff;
 }
 
 /* HEADER */
 .header {
-    background: var(--dark);
+    background-color: var(--dark);
     height: 60px;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ body {
 .layout_panel {
     margin: 10px;
     padding: 20px;
-    background: var(--gray);
+    background-color: var(--gray);
     box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
 }
 
@@ -88,6 +88,46 @@ body {
 
 .result .result__lose {
     color: red;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: center;    
+}
+
+.buttons .buttons__btn {
+    padding: 5px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.buttons .buttons__btn--atack {
+    background-color: #e51c23;
+    color: #fff;
+}
+
+.buttons .buttons__btn--special-atack {
+    background-color: #ff9800;
+    color: var(--dark);
+}
+
+.buttons .buttons__btn--heal {
+    background-color: #259b24;
+    color: #fff;
+}
+
+.buttons .buttons__btn--give-up {
+    background-color: #888;
+    color: var(--dark);
+}
+
+.buttons .buttons__btn--new-game {
+    background-color: #4253af;
+    color: #fff
 }
 
 /* FOOTER */

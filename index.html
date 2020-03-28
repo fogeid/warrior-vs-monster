@@ -18,6 +18,7 @@
         <!-- GAME -->
         <main class="game" id="app">
             <div class="layout_panel scores">
+                <!-- SCORE -->
                 <div class="score">
                     <h1 class="score__player">Jogador</h1>
                     <div class="score__life-bar">
@@ -37,11 +38,22 @@
                     <div class="score__percentage">{{ monsterLife }}%</div>
                 </div>
             </div>
+            <!-- RESULT -->
             <div v-if="hasResult" class="layout_panel result">
                 <div v-if="monsterLife === 0" class="result__win">Você ganhou!!! :)</div>
                 <div v-else class="result__lose">Você perdeu! :(</div>
             </div>
-            <div class="layout_panel buttons"></div>
+            <!-- BUTTONS -->
+            <div class="layout_panel buttons">
+                <template v-if="running">
+                    <div class="buttons__btn buttons__btn--atack">Ataque</div>
+                    <div class="buttons__btn buttons__btn--special-atack">Ataque Especial</div>
+                    <div class="buttons__btn buttons__btn--heal">Curar</div>
+                    <div class="buttons__btn buttons__btn--give-up">Desistir</div>
+                </template>
+                <div v-else class="buttons__btn buttons__btn--new-game">Iniciar Jogo</div>
+            </div>
+            <!-- LOGS -->
             <div class="layout_panel logs"></div>
         </main>
 
